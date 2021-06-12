@@ -13,7 +13,9 @@ export const Card = (props) => {
 
   return (
     <article
-      className="senyor senyor-molde col-8 offset-2 mb-4"
+      className={`senyor senyor-molde${
+        personaje ? " marcado" : ""
+      } col-8 offset-2 mb-4`}
       onClick={marcarPersonajes}
     >
       <div className="row">

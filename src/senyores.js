@@ -6,7 +6,7 @@ export const senyoresAPI = [
     foto: "fary.jpg",
     estado: "R.I.P.",
     twitter: "Pendiente",
-    marcado: false,
+    marcado: true,
     mensaje: "el rey de la copla de barrio",
   },
   {
@@ -26,7 +26,7 @@ export const senyoresAPI = [
     foto: "bertin.jpg",
     estado: "Vivo",
     twitter: "@BertinOsborne",
-    marcado: false,
+    marcado: true,
     mensaje: "de un macho ibérico",
   },
 ];
