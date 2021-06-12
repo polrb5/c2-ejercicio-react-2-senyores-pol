@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export const Card = (props) => {
   const { senyor } = props;
   const getInicial = (nombre) => {
@@ -5,15 +7,22 @@ export const Card = (props) => {
     const posicion = partesNombre[0].length > 2 ? 0 : 1;
     return partesNombre[posicion].charAt(0).toUpperCase();
   };
+
+  const marcarPersonajes = () => setPersonaje(!personaje);
+  const [personaje, setPersonaje] = useState(senyor.marcado);
+
   return (
-    <article className="senyor senyor-molde col-8 offset-2 mb-4">
+    <article
+      className="senyor senyor-molde col-8 offset-2 mb-4"
+      onClick={marcarPersonajes}
+    >
       <div className="row">
         <div className="avatar col">
           <img
             src={`img/${senyor.foto}`}
             className="img-fluid rounded-circle"
             width="214"
-            alt=""
+            alt={senyor.mensaje}
           />
           <span className="inicial text-center rounded-circle">
             {getInicial(senyor.nombre)}
